@@ -5,38 +5,46 @@ import { Button } from "@/components/ui/button";
 
 export default function HeroProduct() {
   return (
-    <div className="w-full flex justify-center p-4 rounded-[64px] ">
-      <div className="relative w-full max-w-7xl overflow-hidden">
+    <div className="w-full flex justify-center p-4">
+      <div className="relative w-full max-w-7xl rounded-[64px] overflow-hidden">
 
         {/* Background Image */}
         <Image
-          src="/product/product-1.jpg" // your main image
+          src="/product/product-1.jpg"
           alt="Nike Air Max"
-          width={100}
+          width={1600}
           height={700}
-          className=" w-full h-157.5 rounded-[64px]  "
+          className="w-full h-212.5 object-cover"
+          priority
         />
 
-        {/* Overlay Gradient */}
-        <div className="absolute inset-0 bg-black/30 rounded-[64px] " />
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black/40 z-0" />
+
+        {/* TOP BADGE */}
+        <div className="absolute top-1/4  z-20">
+          <button className="bg-[#232321] font-semibold backdrop-blur-md text-white px-20 rounded-b-4xl -rotate-90 -ml-34 py-5  ">
+            Nike product of the year
+          </button>
+        </div>
 
         {/* LEFT CONTENT */}
-        <div className="absolute bottom-10 left-10 z-10 max-w-md text-white">
-          <h1 className="text-4xl md:text-5xl font-bold tracking-wide">
+        <div className="absolute bottom-10 left-10 z-20 text-white">
+          <h1 className="text-4xl md:text-[74px] font-semibold tracking-wide">
             NIKE AIR MAX
           </h1>
 
-          <p className="text-sm md:text-base text-gray-200 mt-3">
-            Nike introducing the new air max for your comfort
+          <p className="text-sm md:text-2xl text-gray-200 font-semibold mt-3 max-w-xl">
+            Nike introducing the new air max for everyone comfort
           </p>
 
-          <Button className="mt-6 bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-full">
+          <Button className="mt-6 bg-[#4A69E2] px-8 py-2 font-medium text-sm cursor-pointer">
             SHOP NOW
           </Button>
         </div>
 
         {/* RIGHT THUMBNAILS */}
-        <div className="absolute right-6 bottom-8 -translate-y-1/2 flex flex-col gap-4 z-10">
+        <div className="absolute right-6 bottom-10 flex flex-col gap-4 z-20">
           <div className="bg-white/20 backdrop-blur-md p-1 rounded-xl border border-white/30">
             <Image
               src="/product/product-2.jpg"

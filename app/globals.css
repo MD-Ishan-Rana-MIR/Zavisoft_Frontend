@@ -124,3 +124,7 @@
     @apply bg-background text-foreground;
   }
 }
+
+.textColor {
+  color: #e7e7e3;
+}
